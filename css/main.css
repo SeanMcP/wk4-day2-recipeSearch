@@ -11,8 +11,12 @@ body {
 header {
 	background: white;
 	border-bottom: 1px solid #ddd;
-	display: inline;
+	display: flex;
+	flex-flow: row nowrap;
 	padding: 20px 0;
+}
+h1 {
+	flex: 0 30%;
 }
 input, button {
 	border: 1px solid #ddd;
@@ -20,11 +24,12 @@ input, button {
 	padding: 10px;
 }
 input {
-	width: 60%;
+	flex-grow: 1;
 }
 button {
 	background: linear-gradient(#f1f1f1, #ddd);
 	color: #666;
+	flex-grow: 0;
 	margin-left: -5px;
 	padding: 10px 20px;
 }
@@ -50,4 +55,12 @@ article img {
 }
 article h2, article p {
 	margin: 10px 20px;
+}
+article p {
+	color: #999;
+	font-style: italic;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-transform: capitalize;
+	/*white-space: nowrap;*/
 }

@@ -6,16 +6,15 @@ searchBtn.addEventListener('click', function(){
 
   searchResults.innerHTML = "";
 
+  // Pulls value from search bar
   let searchQuery = search.value;
-  console.log("searchQuery: ", searchQuery);
   let urlBase = 'http://recipepuppyproxy.herokuapp.com/api/?q=';
+  // Concatenates base url and search query
   let urlQuery = urlBase + searchQuery;
-  console.log('urlQuery: ', urlQuery);
 
   fetch(urlQuery)
     .then(function(response){
       return response.json().then(function(data){
-        console.log("This is data: ", data);
         for (var i = 0; i < data.results.length; i++) {
           let art = document.createElement('article');
           if(data.results[i].thumbnail) {
