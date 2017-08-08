@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 0 auto;
+	max-width: 920px;
+}
+header {
+	background: white;
+	border-bottom: 1px solid #ddd;
+	display: inline;
+	padding: 20px 0;
+}
+input, button {
+	border: 1px solid #ddd;
+	padding: 1%;
+}
+button {
+	background: linear-gradient(#f1f1f1, #ddd);
+	color: #666;
+	margin-left: -5px;
+}
+button:hover {
+	background: #f1f1f1;
+	color: #999;
+}
+main {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	padding: 2% 0;
+}
+.recipe {
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	flex: 0 19%;
+	padding: 2%;
+}
